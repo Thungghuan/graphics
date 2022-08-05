@@ -21,5 +21,12 @@ int main() {
   Eigen::Vector3f p2 = t * p1;
   std::cout << p2 << std::endl;
 
+  // in one step
+  Eigen::Matrix3f m;
+  m << std::cos(theta), -std::sin(theta), 1, std::sin(theta), std::cos(theta),
+      2, 0, 0, 1;
+  Eigen::Vector3f p3 = m * p;
+  std::cout << p3 << std::endl;
+
   return 0;
 }
