@@ -69,6 +69,10 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
   // Create the projection matrix for the given parameters.
   // Then return it.
 
+  // negate zNear & zFar
+  zNear = -zNear;
+  zFar = -zFar;
+
   float half = eye_fov / 2.0f * MY_PI / 180;
   float top = tan(half) * abs(zNear);
   float bottom = -top;
@@ -102,7 +106,7 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
   perspect << zNear, 0, 0, 0,
               0, zNear, 0, 0,
               0, 0, zNear + zFar, -zNear * zFar,
-              0, 0, -1, 0;
+              0, 0, 1, 0;
   // clang-format on
 
   // Reverse z-axis
