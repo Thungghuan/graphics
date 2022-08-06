@@ -86,6 +86,14 @@
         "memory_resource": "cpp",
         "utility": "cpp",
         "stop_token": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "filesystem": "cpp",
+        "list": "cpp",
+        "*.ipp": "cpp",
+        "codecvt": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp",
+        "stack": "cpp",
+        "source_location": "cpp"
     }
 }
