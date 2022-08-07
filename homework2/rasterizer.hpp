@@ -19,6 +19,9 @@ inline Buffers operator&(Buffers a, Buffers b) {
 
 enum class Primitive { Line, Triangle };
 
+// TODO: implement this two sampling methods
+enum class SampleMethod { Default, SSAA, MSAA };
+
 /*
  * For the curious : The draw function takes two buffer id's as its arguments.
  * These two structs make sure that if you mix up with their orders, the
