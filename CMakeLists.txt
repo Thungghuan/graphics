@@ -7,3 +7,4 @@ include_directories(/opt/homebrew/include)
 
 add_subdirectory(homework0)
 add_subdirectory(homework1)
+add_subdirectory(homework2)
