@@ -7,5 +7,5 @@ add_executable(Rasterizer3 main.cpp rasterizer.hpp rasterizer.cpp global.hpp Tri
 target_link_libraries(Rasterizer3 ${OpenCV_LIBRARIES})
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E copy_directory ${PROJECT_SOURCE_DIR}/models/  ${CMAKE_BINARY_DIR}/models)
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink ${PROJECT_SOURCE_DIR}/models/  ${CMAKE_CURRENT_BINARY_DIR}/models)
 #target_compile_options(Rasterizer PUBLIC -Wall -Wextra -pedantic)
