@@ -420,10 +420,14 @@ int main(int argc, const char **argv) {
   rst::rasterizer r(700, 700);
 
   auto texture_path = "hmap.jpg";
+  // texture_path = "spot_texture.png";
+
   r.set_texture(Texture(obj_path + texture_path));
 
   std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader =
       phong_fragment_shader;
+
+  // active_shader = texture_fragment_shader;
 
   if (argc >= 2) {
     command_line = true;
@@ -491,9 +495,9 @@ int main(int argc, const char **argv) {
     key = cv::waitKey(10);
 
     if (key == 'a') {
-      angle -= 0.1;
+      angle -= 10;
     } else if (key == 'd') {
-      angle += 0.1;
+      angle += 10;
     }
   }
   return 0;
